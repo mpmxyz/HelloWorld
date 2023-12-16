@@ -1,16 +1,16 @@
 ﻿using ResoniteModLoader;
 
-namespace SampleMod
+namespace HelloWorld2
 {
     /// <summary>
     /// This mod is an implementation based on the example given in https://github.com/resonite-modding-group/ResoniteModLoader/blob/main/doc/making_mods.md.
     /// </summary>
-    public class SampleModRML : ResoniteMod, ISampleMod
+    public class HelloWorld2RML : ResoniteMod, IHelloWorld2
     {
-        public override string Name => "SampleMod";
-        public override string Author => "mpmxyz";
+        public override string Name => "HelloWorld2";
+        public override string Author => "mpmxyz2";
         public override string Version => "1.0.3"; //Version of the mod, should match the AssemblyVersion
-        public override string Link => "https://github.com/mpmxyz/ResoniteSampleMod";
+        public override string Link => "https://github.com/mpmxyz/HelloWorld";
 
 
         //The following
@@ -28,7 +28,7 @@ namespace SampleMod
             //Patches.Apply(this);
 
             //Various log methods provided by the mod loader, below is an example of how they will look
-            //3:14:42 AM.069 ( -1 FPS)  [INFO] [ResoniteModLoader/SampleMod] a regular log
+            //3:14:42 AM.069 ( -1 FPS)  [INFO] [ResoniteModLoader/HelloWorld2] a regular log
             Debug("a debug log");
             Msg("a regular log");
             Warn("a warn log");

@@ -1,4 +1,4 @@
-﻿namespace SampleMod
+﻿namespace HelloWorld2
 {
     class TestableCode
     {

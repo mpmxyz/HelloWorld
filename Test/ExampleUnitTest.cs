@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SampleMod
+namespace HelloWorld2
 {
     [TestClass]
     public class ExampleUnitTest

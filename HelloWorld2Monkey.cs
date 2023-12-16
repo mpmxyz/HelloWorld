@@ -3,13 +3,13 @@ using MonkeyLoader.Configuration;
 using MonkeyLoader.Resonite;
 using System;
 
-namespace SampleMod
+namespace HelloWorld2
 {
-    public class SampleModMonkey : ResoniteMonkey<SampleModMonkey>, ISampleMod
+    public class HelloWorld2Monkey : ResoniteMonkey<HelloWorld2Monkey>, IHelloWorld2
     {
-        public override string Name => "SampleMod";
+        public override string Name => "HelloWorld2";
 
-        private SampleModMonkeyConfig LoadedConfig;
+        private HelloWorld2MonkeyConfig LoadedConfig;
 
         public bool Enabled => LoadedConfig.Enabled.GetValue();
 
@@ -20,7 +20,7 @@ namespace SampleMod
 
         protected override bool OnEngineReady()
         {
-            LoadedConfig = Config.LoadSection<SampleModMonkeyConfig>();
+            LoadedConfig = Config.LoadSection<HelloWorld2MonkeyConfig>();
             PatchesHarmony.Apply(this);
             return base.OnEngineReady();
         }
@@ -40,13 +40,13 @@ namespace SampleMod
             return base.OnShutdown();
         }
 
-        private class SampleModMonkeyConfig : ConfigSection
+        private class HelloWorld2MonkeyConfig : ConfigSection
         {
             public DefiningConfigKey<bool> Enabled = new DefiningConfigKey<bool>("Enabled", "Enables a small message on each button click.", () => true);
 
             public override string Description => "MonkeyLoader flavor of sample mod's config";
 
-            public override string Name => "SampleMod";
+            public override string Name => "HelloWorld2";
 
             public override Version Version => new Version(1, 0, 0);
         }
