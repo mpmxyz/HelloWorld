@@ -22,9 +22,9 @@ on:
       RESONITE_CLONE_TOKEN:
         required: true
 env:
-  ARTIFACT_NAME: "SampleMod"
-  ASSEMBLY_NAME: "mpmxyz.SampleMod.MonkeyLoader"
-  PROJECT_FILE: "SampleModMonkey.csproj"
+  ARTIFACT_NAME: "HelloWorld2"
+  ASSEMBLY_NAME: "mpmxyz.HelloWorld2.MonkeyLoader"
+  PROJECT_FILE: "HelloWorld2Monkey.csproj"
   ResonitePath: "${{ github.workspace }}/Download/Resonite"
   PROJECT_URL: "${{ github.server_url }}/${{ github.repository }}"
   PROJECT_PATH: "${{ github.workspace }}/repo"

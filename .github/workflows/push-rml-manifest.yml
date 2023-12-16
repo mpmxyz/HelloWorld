@@ -26,7 +26,7 @@ on:
         required: true
 env:
   RML_AUTHOR_ID: "${{ github.repository_owner }}"
-  RML_MOD_ID: "SampleMod"
+  RML_MOD_ID: "HelloWorld2"
   CHECKOUT_PATH: "${{ github.workspace }}/repo"
   RML_MANIFEST_PATH: "${{ github.workspace }}/manifest"
   RML_MANIFEST_REPO: "${{ github.repository_owner }}/resonite-mod-manifest"
@@ -51,7 +51,7 @@ jobs:
           path: "${{ env.RML_MANIFEST_PATH }}"
 
       - name: "Fill mod version template"
-        uses: mpmxyz/merge-json-with-template@79884260de99e04a77e8db68d72c8544ee03156c
+        uses: mpmxyz2/merge-json-with-template@79884260de99e04a77e8db68d72c8544ee03156c
         with:
           source-file: "${{ env.CHECKOUT_PATH }}/ResoniteModLoader/manifest-template.json"
           target-file: "/tmp/filled-template.json"
@@ -67,7 +67,7 @@ jobs:
           echo ']' >> /tmp/hashes.json
 
       - name: "Merge hashes into version template"
-        uses: mpmxyz/merge-json-with-template@79884260de99e04a77e8db68d72c8544ee03156c
+        uses: mpmxyz2/merge-json-with-template@79884260de99e04a77e8db68d72c8544ee03156c
         with:
           source-file: "/tmp/hashes.json"
           target-file: "/tmp/filled-template.json"
@@ -85,7 +85,7 @@ jobs:
           cat "/tmp/filled-template.json"
 
       - name: "Merge into mod manifest"
-        uses: mpmxyz/merge-json-with-template@79884260de99e04a77e8db68d72c8544ee03156c
+        uses: mpmxyz2/merge-json-with-template@79884260de99e04a77e8db68d72c8544ee03156c
         with:
           source-file: "/tmp/filled-template.json"
           target-file: "${{ env.RML_MANIFEST_PATH }}/manifest/${{ env.RML_AUTHOR_ID }}/${{ env.RML_MOD_ID }}/info.json"

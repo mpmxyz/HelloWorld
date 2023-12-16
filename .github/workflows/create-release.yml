@@ -29,7 +29,7 @@ on:
         default: true
 env:
   NUGET_PUBLISH_TARGET: "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
-  ARTIFACT_NAME: SampleMod
+  ARTIFACT_NAME: HelloWorld2
   RML_MANIFEST_TOKEN: "${{ secrets.RML_MANIFEST_TOKEN }}"
 name: "Create Release"
 jobs:
