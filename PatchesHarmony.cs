@@ -1,16 +1,16 @@
 ﻿using FrooxEngine.UIX;
 using HarmonyLib;
 
-namespace SampleMod
+namespace HelloWorld2
 {
     internal class PatchesHarmony
     {
-        private static ISampleMod ModInstance;
+        private static IHelloWorld2 ModInstance;
 
-        internal static void Apply(ISampleMod instance)
+        internal static void Apply(IHelloWorld2 instance)
         {
             ModInstance = instance;
-            Harmony harmony = new Harmony("com.github.mpmxyz.SampleMod"); //typically a reverse domain name is used here (https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
+            Harmony harmony = new Harmony("com.github.mpmxyz.HelloWorld2"); //typically a reverse domain name is used here (https://en.wikipedia.org/wiki/Reverse_domain_name_notation)
             harmony.PatchAll(); // do whatever LibHarmony patching you need, this will patch all [HarmonyPatch()] instances
         }
         //Example of how a HarmonyPatch can be formatted

@@ -1,6 +1,6 @@
-﻿namespace SampleMod
+﻿namespace HelloWorld2
 {
-    internal interface ISampleMod
+    internal interface IHelloWorld2
     {
         bool Enabled { get; }
 
